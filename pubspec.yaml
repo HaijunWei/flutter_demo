@@ -1,0 +1,41 @@
+name: flutter_demo
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # 状态管理
+  hooks_riverpod: 2.5.2
+  riverpod_annotation: 2.3.5
+  flutter_hooks: 0.20.5
+
+  # json、model
+  json_annotation: 4.9.0
+  freezed_annotation: 2.4.1
+
+  # 路由
+  go_router: 14.2.0
+
+  # 下拉刷新
+  easy_refresh: 3.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner:
+  custom_lint:
+  riverpod_lint:
+  riverpod_generator:
+  json_serializable:
+  freezed:
+  go_router_builder:
+
+flutter:
+  uses-material-design: true
