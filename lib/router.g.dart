@@ -10,6 +10,7 @@ List<RouteBase> get $appRoutes => [
       $homeRoute,
       $formRoute,
       $longListRoute,
+      $tabHomeRoute,
     ];
 
 RouteBase get $homeRoute => GoRouteData.$route(
@@ -66,6 +67,28 @@ extension $LongListRouteExtension on LongListRoute {
 
   String get location => GoRouteData.$location(
         '/long-list',
+      );
+
+  void go(BuildContext context) => context.go(location);
+
+  Future<T?> push<T>(BuildContext context) => context.push<T>(location);
+
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
+
+  void replace(BuildContext context) => context.replace(location);
+}
+
+RouteBase get $tabHomeRoute => GoRouteData.$route(
+      path: '/tab-home',
+      factory: $TabHomeRouteExtension._fromState,
+    );
+
+extension $TabHomeRouteExtension on TabHomeRoute {
+  static TabHomeRoute _fromState(GoRouterState state) => const TabHomeRoute();
+
+  String get location => GoRouteData.$location(
+        '/tab-home',
       );
 
   void go(BuildContext context) => context.go(location);

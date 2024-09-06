@@ -10,5 +10,6 @@ FutureOr<List<MenuModel>> homeMenus(HomeMenusRef ref) async {
   return [
     const MenuModel(name: '表单例子', path: '/form'),
     const MenuModel(name: '长列表(下拉刷新 + 加载更多)', path: '/long-list'),
+    const MenuModel(name: 'TabPage例子', path: '/tab-home'),
   ];
 }
